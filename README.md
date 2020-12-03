@@ -2,11 +2,16 @@
 
 > 项目地址： https://github.com/MyMessiah/LumenSwaggerDemo
 
+#### 通过 Composer Create-Project 命令安装 lumen
+
+``` php
+composer create-project --prefer-dist laravel/lumen demo 6.*
+```
 
 #### 安装依赖
 
 ``` sh
-$ composer require darkaonline/swagger-lume
+$ composer require darkaonline/swagger-lume:6.*
 ```
 
 #### 项目配置
