@@ -14,13 +14,13 @@ use OpenApi\Annotations\Server;
  *     title="演示服务",
  *     description="这是演示服务，该文档提供了演示swagger api的功能",
  *     @Contact(
- *         email="mylxsw@aicode.cc",
- *         name="mylxsw"
+ *         email="senkorl@163.com",
+ *         name="qiuxi"
  *     )
  * )
  *
  * @Server(
- *     url="http://localhost",
+ *     url="http://lumen.test",
  *     description="开发环境",
  * )
  *
@@ -34,6 +34,7 @@ use OpenApi\Annotations\Server;
  *         type="string",
  *         description="响应代码"
  *     ),
+ *     @Property(property="data", type="object", description="响应结果"),
  *     @Property(property="message", type="string", description="响应结果提示")
  * )
  *

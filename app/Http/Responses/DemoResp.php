@@ -36,7 +36,7 @@ use OpenApi\Annotations\Schema;
  *
  * @package App\Http\Responses
  */
-class DemoResp extends JsonResponse
+class DemoResp
 {
     /**
      * @Property(

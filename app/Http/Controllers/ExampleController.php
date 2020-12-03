@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Http\Controllers;
 
 use App\Http\Responses\DemoAdditionalProperty;
@@ -6,6 +7,7 @@ use App\Http\Responses\DemoResp;
 use Illuminate\Http\Request;
 use OpenApi\Annotations\Get;
 use OpenApi\Annotations\MediaType;
+use OpenApi\Annotations\Post;
 use OpenApi\Annotations\Property;
 use OpenApi\Annotations\RequestBody;
 use OpenApi\Annotations\Response;
@@ -15,7 +17,7 @@ class ExampleController extends Controller
 {
 
     /**
-     * @Get(
+     * @Post(
      *     path="/demo",
      *     tags={"演示"},
      *     summary="演示API",
@@ -48,9 +50,9 @@ class ExampleController extends Controller
      *     )
      * )
      *
-     * @param Request $request
+     * @param  Request  $request
      *
-     * @return DemoResp
+     * @return array
      */
     public function example(Request $request)
     {
@@ -71,7 +73,22 @@ class ExampleController extends Controller
         $prop2->value = "bar2";
 
         $resp->properties = [$prop1, $prop2];
+        // $resp             = $this->object_array($resp);
+        // return $resp;
+        return $this->returnData(200, $resp, 'success');
+    }
 
-        return $resp;
+    private function object_array($array)
+    {
+        if (is_object($array)) {
+            $array = (array)$array;
+        }
+        if (is_array($array)) {
+            foreach ($array as $key => $value) {
+                $array[$key] = $this->object_array($value);
+            }
+        }
+
+        return $array;
     }
 }

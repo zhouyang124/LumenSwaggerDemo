@@ -4,20 +4,20 @@
         "title": "演示服务",
         "description": "这是演示服务，该文档提供了演示swagger api的功能",
         "contact": {
-            "name": "mylxsw",
-            "email": "mylxsw@aicode.cc"
+            "name": "qiuxi",
+            "email": "senkorl@163.com"
         },
         "version": "1.0.0"
     },
     "servers": [
         {
-            "url": "http://localhost",
+            "url": "http://lumen.test",
             "description": "开发环境"
         }
     ],
     "paths": {
         "/demo": {
-            "get": {
+            "post": {
                 "tags": [
                     "演示"
                 ],
@@ -86,6 +86,10 @@
                     "code": {
                         "description": "响应代码",
                         "type": "string"
+                    },
+                    "data": {
+                        "description": "响应结果",
+                        "type": "object"
                     },
                     "message": {
                         "description": "响应结果提示",
