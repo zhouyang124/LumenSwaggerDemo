@@ -4,8 +4,8 @@
 
 #### 通过 Composer Create-Project 命令安装 lumen
 
-``` php
-composer create-project --prefer-dist laravel/lumen demo 6.*
+``` sh
+$ composer create-project --prefer-dist laravel/lumen demo 6.*
 ```
 
 #### 安装依赖
