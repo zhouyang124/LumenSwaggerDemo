@@ -15,8 +15,8 @@ class Controller extends BaseController
      *
      * @return array
      */
-    public function returnData($code, $data = [], $message = ''): array
+    public function returnData($code, $message = '', $data = []): array
     {
-        return compact('code', 'data', 'message');
+        return compact('code', 'message', 'data');
     }
 }

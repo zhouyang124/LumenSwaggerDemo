@@ -34,8 +34,8 @@ use OpenApi\Annotations\Server;
  *         type="string",
  *         description="响应代码"
  *     ),
- *     @Property(property="data", type="object", description="响应结果"),
- *     @Property(property="message", type="string", description="响应结果提示")
+ *     @Property(property="message", type="string", description="响应结果提示"),
+ *     @Property(property="data", type="object", description="响应结果")
  * )
  *
  *

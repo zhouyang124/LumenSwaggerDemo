@@ -22,8 +22,8 @@ $app = new Laravel\Lumen\Application(
 );
 // 启用 Facades 支持
 $app->withFacades();
-
-// $app->withEloquent();
+// 启用 数据库模型
+$app->withEloquent();
 
 /*
 |--------------------------------------------------------------------------
@@ -93,10 +93,15 @@ $app->configure('swagger-lume');
 
 // $app->register(App\Providers\AppServiceProvider::class);
 // $app->register(App\Providers\AuthServiceProvider::class);
-// $app->register(App\Providers\EventServiceProvider::class);
+// 注册 event 服务提供者
+$app->register(App\Providers\EventServiceProvider::class);
 
 // 注册 SwaggerLume 的 ServiceProvider
 $app->register(\SwaggerLume\ServiceProvider::class);
+
+// 注册 redis queue 服务提供者
+$app->register(\Illuminate\Redis\RedisServiceProvider::class);
+
 
 /*
 |--------------------------------------------------------------------------

@@ -16,13 +16,13 @@
         }
     ],
     "paths": {
-        "/demo": {
+        "/sw/demo": {
             "post": {
                 "tags": [
                     "演示"
                 ],
                 "summary": "演示API",
-                "operationId": "App\\Http\\Controllers\\ExampleController::example",
+                "operationId": "App\\Http\\Controllers\\ExampleController::demo",
                 "requestBody": {
                     "content": {
                         "application/json": {
@@ -87,13 +87,13 @@
                         "description": "响应代码",
                         "type": "string"
                     },
-                    "data": {
-                        "description": "响应结果",
-                        "type": "object"
-                    },
                     "message": {
                         "description": "响应结果提示",
                         "type": "string"
+                    },
+                    "data": {
+                        "description": "响应结果",
+                        "type": "object"
                     }
                 },
                 "type": "object"

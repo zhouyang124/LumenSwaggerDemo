@@ -18,7 +18,7 @@ class ExampleController extends Controller
 
     /**
      * @Post(
-     *     path="/demo",
+     *     path="/sw/demo",
      *     tags={"演示"},
      *     summary="演示API",
      *     @RequestBody(
@@ -54,7 +54,7 @@ class ExampleController extends Controller
      *
      * @return array
      */
-    public function example(Request $request)
+    public function demo(Request $request)
     {
         // TODO 业务逻辑
 
@@ -75,7 +75,7 @@ class ExampleController extends Controller
         $resp->properties = [$prop1, $prop2];
         // $resp             = $this->object_array($resp);
         // return $resp;
-        return $this->returnData(200, $resp, 'success');
+        return $this->returnData(200,  'success', $resp);
     }
 
     private function object_array($array)
