@@ -1,6 +1,6 @@
 ## LumenSwaggerDemo
 
-> 项目地址： https://github.com/MyMessiah/LumenSwaggerDemo
+> 项目地址： https://github.com/ColdJk/LumenSwaggerDemo
 
 #### 通过 Composer Create-Project 命令安装 lumen
 
