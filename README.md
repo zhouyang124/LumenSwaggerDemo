@@ -1,17 +1,17 @@
 ## LumenSwaggerDemo
 
-> 项目地址： https://github.com/ColdJk/LumenSwaggerDemo
+> 项目地址：https://github.com/zhouyang124/LumenSwaggerDemo
 
 #### 通过 Composer Create-Project 命令安装 lumen
 
 ``` sh
-$ composer create-project --prefer-dist laravel/lumen demo 6.*
+$ composer create-project --prefer-dist laravel/lumen demo 6.0
 ```
 
 #### 安装依赖
 
 ``` sh
-$ composer require darkaonline/swagger-lume:6.*
+$ composer require darkaonline/swagger-lume:6.0
 ```
 
 #### 项目配置
@@ -61,14 +61,14 @@ php artisan swagger-lume:generate
 
 #### 预览文档
 
-打开浏览器访问 http:// 访问地址 /docs，可以看到 json内容串
+打开浏览器访问 http://127.0.0.1:8080/api-docs.json，可以看到 json内容串
 
 
-访问 http:// 访问地址 /api/documentation，我们看到swagger接口页面
+访问 http://localhost:3200/ ，我们看到swagger接口页面
 
 #### 更多
 本文简述了如何在 Lumen 项目中使用代码注释自动生成 Swagger 文档，并配合 phpstorm 的代码提示功能，然而，学会了这些还远远不够，你还需要去了解 Swagger 文档的语法结构，在 [swagger-php](https://github.com/zircote/swagger-php) 项目的 Examples 目录中包含很多使用范例，你可以参考一下。
 
-团队项目中使用了 swagger 文档，但是总得有个地方管理文档吧，这里推荐一下 Wizard 项目，该项目是一款用于团队协作的文档管理工具，支持 Markdown 文档和 Swagger 文档，感兴趣的不妨尝试一下。
+
 
 
